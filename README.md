@@ -3,6 +3,7 @@
  # Ace Ace Group Test Application
 
 <br/>
+<br/>
 
 This is a test application developed for Ace Ace Group using Clean Architecture. Following are the requirements
 * Create OneSignal Account (it’s free). You have to use OneSignal Rest API to perform CRUD operation using .NET Framework MVC, Entity framework code first approach
@@ -48,8 +49,10 @@ In the Package Manager Console, enter the command **Update-Database** to create 
    PM> Update-Database
 ```
 
-<img align="left" width="400" height="400" src="https://user-images.githubusercontent.com/27881417/98597524-9a3c3880-22f2-11eb-978a-84d758ff72e9.png">
+<br/>
+<img align="left" width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98597524-9a3c3880-22f2-11eb-978a-84d758ff72e9.png">
 
+<br/>
 An admin & data entry user have been seeded in the migration
 
 ### Run Application

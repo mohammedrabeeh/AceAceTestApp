@@ -70,17 +70,17 @@ An admin & data entry user have been seeded in the migration
 
 Press F5 in Visual Studio to run the application.
 
-As per the requirement, there is 2 users created. An admin & a data entry user
+As per the requirement, there is 2 users created. An admin & a data entry user.
 
 * Admin User
 ```json
-   Email: **admin@test.com** 
-   Password: **P@ssw0rd**
+   Email: admin@test.com
+   Password: P@ssw0rd
 ```
 * Data Entry User 
 ```json
-   Email: **dataentry@test.com** 
-   Password: **P@ssw0rd**
+   Email: dataentry@test.com
+   Password: P@ssw0rd
 ```
 
 ### Page Screenshots

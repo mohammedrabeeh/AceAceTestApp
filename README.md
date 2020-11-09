@@ -18,11 +18,12 @@ This is a test application developed for Ace Ace Group using Clean Architecture.
 
 * ASP .NET Core 3.1
 * Entity Framework Core 3.1
+* MS SQL Server 2016
 
 
 ## Getting Started
 
-* Download this git repository
+* Download this git repository to your local computer
 * Navigate to the folder path
 * Open **AceAceTestApp/AceAceTestApp.sln** in Visual Studio 2019
 * Wait for the packages to be restored automatically
@@ -31,7 +32,7 @@ This is a test application developed for Ace Ace Group using Clean Architecture.
 
 ### Database Configuration
 
-Modify the **DefaultConnection** connection string within **appsettings.json** in AceAceTestApp.UI.MVC>>AceAceTestApp.MVC to a valid SQL Server instance.
+Modify the **DefaultConnection** connection string within **appsettings.json** in **AceAceTestApp.UI.MVC>>AceAceTestApp.MVC** to a valid SQL Server instance.
 
 ```json
    "ConnectionStrings": {
@@ -39,7 +40,7 @@ Modify the **DefaultConnection** connection string within **appsettings.json** i
     }
 ```
 
-### Set Default Project
+### Set Startup Project
 
 In Visual studio solution explorer, right click on **AceAceTestApp.MVC** under **AceAceTestApp.UI.MVC** and click **Set as Startup Project**
 
@@ -51,7 +52,7 @@ In Visual studio solution explorer, right click on **AceAceTestApp.MVC** under *
 
 Code first approach is used for development of this application. Initial Migrations are already created.
 
-In Visual Studio Menu, Open Tools>>NuGet Packet Manager>>Package Manager Console
+In Visual Studio Menu, Open **Tools>>NuGet Packet Manager>>Package Manager Console**
 
 In the Package Manager Console, enter the command **Update-Database** to create database with necessary tables
 
@@ -60,7 +61,7 @@ In the Package Manager Console, enter the command **Update-Database** to create 
 ```
 
 
-<img src="https://user-images.githubusercontent.com/27881417/98597524-9a3c3880-22f2-11eb-978a-84d758ff72e9.png">
+<img src="https://user-images.githubusercontent.com/27881417/98601330-52b8ab00-22f8-11eb-84e8-337f963de078.png">
 
 
 An admin & data entry user have been seeded in the migration
@@ -69,10 +70,18 @@ An admin & data entry user have been seeded in the migration
 
 Press F5 in Visual Studio to run the application.
 
-As per the requirement, there is 2 user roles created.
+As per the requirement, there is 2 users created. An admin & a data entry user
 
-* Admin User - Email: **admin@test.com** Password: **P@ssw0rd**
-* Data Entry User - Email: **dataentry@test.com** Password: **P@ssw0rd**
+* Admin User
+```json
+   Email: **admin@test.com** 
+   Password: **P@ssw0rd**
+```
+* Data Entry User 
+```json
+   Email: **dataentry@test.com** 
+   Password: **P@ssw0rd**
+```
 
 ### Page Screenshots
 

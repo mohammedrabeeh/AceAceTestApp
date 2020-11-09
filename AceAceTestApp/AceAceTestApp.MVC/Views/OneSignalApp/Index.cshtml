@@ -1,0 +1,29 @@
+﻿@model CleanArchitecture.Application.ViewModels.OneSignalAppListViewModel
+
+<h1>View Apps</h1>
+
+
+
+
+<table id="book" class="table table-bordered table-hover">
+    <thead>
+        <tr class="">
+            <th>App ID</th>
+            <th>Name</th>
+            <th>Created At</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var oneSignalApp in Model.OneSignalApps)
+        {
+<tr style="height: 60px;">
+    <td>@oneSignalApp.id</td>
+    <td>@oneSignalApp.name</td>
+    <td>@oneSignalApp.created_at</td>
+    <td>
+        <a asp-action="Update" asp-route-id="@oneSignalApp.id">Edit</a>
+    </td>
+</tr>}
+    </tbody>
+</table>

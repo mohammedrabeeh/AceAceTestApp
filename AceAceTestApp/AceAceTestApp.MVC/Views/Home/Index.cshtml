@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Ace Ace Group Test Application</h1>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <p>Click <a asp-controller="OneSignalApp" asp-action="Index">Here</a> to continue.</p>
+    }
+    else
+    {
+        <p>Please <a href="/Identity/Account/Login">Login</a> to continue.</p>
+    }
+</div>

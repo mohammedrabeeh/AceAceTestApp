@@ -1,0 +1,20 @@
+﻿@model CleanArchitecture.Application.ViewModels.EmployeeViewModel
+
+<table id="book" class="table table-bordered table-hover">
+    <thead>
+        <tr class="">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.Employees)
+        {
+<tr style="height: 60px;">
+    <td>@employee.EmployeeName</td>
+    <td>@employee.EmailAddress</td>
+    <td>@employee.Mobile</td>
+</tr>}
+    </tbody>
+</table>

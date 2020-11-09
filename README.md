@@ -44,7 +44,7 @@ Modify the **DefaultConnection** connection string within **appsettings.json** i
 In Visual studio solution explorer, right click on **AceAceTestApp.MVC** under **AceAceTestApp.UI.MVC** and click **Set as Startup Project**
 
 
-<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599490-72020900-22f5-11eb-95fe-bbdcb9e9a358.png">
+<img src="https://user-images.githubusercontent.com/27881417/98599490-72020900-22f5-11eb-95fe-bbdcb9e9a358.png">
 
 
 ### Database Migrations
@@ -60,7 +60,7 @@ In the Package Manager Console, enter the command **Update-Database** to create 
 ```
 
 
-<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98597524-9a3c3880-22f2-11eb-978a-84d758ff72e9.png">
+<img src="https://user-images.githubusercontent.com/27881417/98597524-9a3c3880-22f2-11eb-978a-84d758ff72e9.png">
 
 
 An admin & data entry user have been seeded in the migration
@@ -78,15 +78,15 @@ As per the requirement, there is 2 user roles created.
 
 * View Page
 
-<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599614-b7263b00-22f5-11eb-88aa-d5bd2803ce0d.png">
+<img src="https://user-images.githubusercontent.com/27881417/98599614-b7263b00-22f5-11eb-88aa-d5bd2803ce0d.png">
 
 * Add Page
 
-<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599803-02d8e480-22f6-11eb-8637-db38a8385a92.png">
+<img src="https://user-images.githubusercontent.com/27881417/98599803-02d8e480-22f6-11eb-8637-db38a8385a92.png">
 
 * Data Entry if try to add/edit
 
-<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599853-18e6a500-22f6-11eb-880b-0b77b9f02ce7.png">
+<img src="https://user-images.githubusercontent.com/27881417/98599853-18e6a500-22f6-11eb-880b-0b77b9f02ce7.png">
 
 
 

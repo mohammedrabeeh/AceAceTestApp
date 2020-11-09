@@ -24,18 +24,28 @@ This is a test application developed for Ace Ace Group using Clean Architecture.
 
 * Download this git repository
 * Navigate to the folder path
-* Open AceAceTestApp/AceAceTestApp.sln in Visual Studio 2019
+* Open **AceAceTestApp/AceAceTestApp.sln** in Visual Studio 2019
+* Wait for the packages to be restored automatically
+* Build the application
 
 
 ### Database Configuration
 
-Modify the **DefaultConnection** connection string within **appsettings.json** to a valid SQL Server instance.
+Modify the **DefaultConnection** connection string within **appsettings.json** in AceAceTestApp.UI.MVC>>AceAceTestApp.MVC to a valid SQL Server instance.
 
 ```json
    "ConnectionStrings": {
     "DefaultConnection": "Server=Your_SQL_Instance_Name;Database=AceAceTestApp;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
 ```
+
+### Set Default Project
+
+In Visual studio solution explorer, right click on **AceAceTestApp.MVC** under **AceAceTestApp.UI.MVC** and click **Set as Startup Project**
+
+
+<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599490-72020900-22f5-11eb-95fe-bbdcb9e9a358.png">
+
 
 ### Database Migrations
 
@@ -61,8 +71,23 @@ Press F5 in Visual Studio to run the application.
 
 As per the requirement, there is 2 user roles created.
 
-* Admin User - Email: admin@test.com Password: P@ssw0rd
-* Data Entry User - Email: dataentry@test.com Password: P@ssw0rd
+* Admin User - Email: **admin@test.com** Password: **P@ssw0rd**
+* Data Entry User - Email: **dataentry@test.com** Password: **P@ssw0rd**
+
+### Page Screenshots
+
+* View Page
+
+<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599614-b7263b00-22f5-11eb-88aa-d5bd2803ce0d.png">
+
+* Add Page
+
+<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599803-02d8e480-22f6-11eb-8637-db38a8385a92.png">
+
+* Data Entry if try to add/edit
+
+<img width="800" height="400" src="https://user-images.githubusercontent.com/27881417/98599853-18e6a500-22f6-11eb-880b-0b77b9f02ce7.png">
+
 
 
 ## Overview

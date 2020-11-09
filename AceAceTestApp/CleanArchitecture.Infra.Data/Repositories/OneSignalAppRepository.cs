@@ -21,6 +21,37 @@ namespace CleanArchitecture.Infra.Data.Repositories
         }
         public IConfiguration Configuration { get; }
 
+        public async Task<IEnumerable<OneSignalApp>> ViewAllApps()
+        {
+            IEnumerable<OneSignalApp> appList;
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(Configuration.GetValue<string>("AuthScheme"), Configuration.GetValue<string>("AuthParam"));
+                using (var response = await httpClient.GetAsync(Configuration.GetValue<string>("OneSignalEndPoint")))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    appList = JsonConvert.DeserializeObject<IEnumerable<OneSignalApp>>(apiResponse);
+                }
+            }
+            return appList;
+
+        }
+
+        public async Task<OneSignalApp> ViewApp(string id)
+        {
+            OneSignalApp oneSignalApp;
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(Configuration.GetValue<string>("AuthScheme"), Configuration.GetValue<string>("AuthParam"));
+                using (var response = await httpClient.GetAsync(Configuration.GetValue<string>("OneSignalEndPoint") + "/" + id))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    oneSignalApp = JsonConvert.DeserializeObject<OneSignalApp>(apiResponse);
+                }
+            }
+            return oneSignalApp;
+        }
+
         public async void CreateApp(OneSignalApp oneSignalApp)
         {
             string strPayload = JsonConvert.SerializeObject(oneSignalApp);
@@ -57,37 +88,6 @@ namespace CleanArchitecture.Infra.Data.Repositories
                     }
                 }
             }
-        }
-
-        public async Task<IEnumerable<OneSignalApp>> ViewAllApps()
-        {
-            IEnumerable<OneSignalApp> appList;
-            using (var httpClient = new HttpClient())
-            {
-                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(Configuration.GetValue<string>("AuthScheme"), Configuration.GetValue<string>("AuthParam"));
-                using (var response = await httpClient.GetAsync(Configuration.GetValue<string>("OneSignalEndPoint")))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    appList = JsonConvert.DeserializeObject<IEnumerable<OneSignalApp>>(apiResponse);
-                }
-            }
-            return appList;
-
-        }
-
-        public async Task<OneSignalApp> ViewApp(string id)
-        {
-            OneSignalApp oneSignalApp;
-            using (var httpClient = new HttpClient())
-            {
-                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(Configuration.GetValue<string>("AuthScheme"), Configuration.GetValue<string>("AuthParam"));
-                using (var response = await httpClient.GetAsync(Configuration.GetValue<string>("OneSignalEndPoint") + "/" + id))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    oneSignalApp = JsonConvert.DeserializeObject<OneSignalApp>(apiResponse);
-                }
-            }
-            return oneSignalApp;
         }
     }
 }
